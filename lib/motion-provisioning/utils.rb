@@ -53,7 +53,7 @@ module MotionProvisioning
 
         $stderr.noecho do
           while ( char = $stdin.getc ) != "\n" # break after [Enter]
-            putc "*"
+            putc "*" unless char == "\b"
             pw << char
           end
         end
